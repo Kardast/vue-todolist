@@ -9,3 +9,7 @@
 .done{
     text-decoration: line-through;
 }
+
+.background{
+    background-color: rgb(93, 93, 148);
+}

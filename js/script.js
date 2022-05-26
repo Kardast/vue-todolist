@@ -5,6 +5,10 @@ const myList = new Vue ({
     // i miei dati
     data: {
         newTodo: "",
+        myCss: {
+            bg: "background",
+
+        },
         todos : [
             {
                 text: "Aprire il recinto alle papere",
@@ -45,13 +49,22 @@ const myList = new Vue ({
         deleteItem(index){
             this.todos.splice(index,1);
         },
-        toggleDone(){
-            if (this.done === false) {
-                this.done = true;
+        toggleDone(item){
+            // if (this.todos[index].done === false) {
+            //     this.todos[index].done = true;
+            // } else {
+            //     this.todos[index].done = false;
+            // }
+            // console.log(this.todos[index].done);
+
+            // alternativa migliore in quanto item è già definito
+            if (item.done === false) {
+                item.done = true;
             } else {
-                this.done = false;
+                item.done = false;
             }
-            console.log(this.done);
         }
     }
 }); 
+
+

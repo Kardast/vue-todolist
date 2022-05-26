@@ -29,6 +29,7 @@ Bonus:
 <!-- OK -->
 
 2- cliccando sul testo dell’item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa) ;
+<!-- OK -->
 
 3 - migliorare il layout, visto che è a vostra libera interpretazione.
 Buon lavoro e buon divertimento! :insegnante_uomo:
