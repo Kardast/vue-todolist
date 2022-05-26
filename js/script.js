@@ -33,9 +33,10 @@ const myList = new Vue ({
 
         addItem(){
 
-            const task = new Object();
-            task.text = this.newTodo;
-            task.done = false;
+            const task = {
+                text : this.newTodo,
+                done : false
+            }
             if (this.newTodo !== "") {
                 this.todos.push(task);
                 this.newTodo = "";
@@ -43,6 +44,14 @@ const myList = new Vue ({
         },
         deleteItem(index){
             this.todos.splice(index,1);
+        },
+        toggleDone(){
+            if (this.done === false) {
+                this.done = true;
+            } else {
+                this.done = false;
+            }
+            console.log(this.done);
         }
     }
 }); 

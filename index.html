@@ -20,7 +20,7 @@
         <!-- il mio input e bottone -->
         <div>
 
-            <input v-model="newTodo" type="text" placeholder="New QuackDo">
+            <input v-model="newTodo" @keyup.enter="addItem" type="text" placeholder="New QuackDo">
             <button @click="addItem" >HonkAdd</button>
         </div>
 
@@ -30,6 +30,7 @@
             <ul v-if="todos.length > 0">
 
                 <li
+                @click="toggleDone"
                 v-for="(item, i) in todos"
                 :class="item.done === true ? 'done' : '' " 
                 :key="i">
