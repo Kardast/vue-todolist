@@ -41,7 +41,7 @@ const myList = new Vue ({
                 text : this.newTodo,
                 done : false
             }
-            if (this.newTodo !== "") {
+            if (this.newTodo.trim() !== "") {
                 this.todos.push(task);
                 this.newTodo = "";
             }
